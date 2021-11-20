@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UserJoinActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/img" />
+
+    <EditText
+        android:id="@+id/et_room_code"
+        android:layout_width="272dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rectangle_border_red_radius_5"
+        android:hint="코드를 입력해주세요"
+        android:fontFamily="@font/gmarket_sans"
+        android:paddingStart="21dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="248dp"
+        android:background="@drawable/ic_enter"
+        app:layout_constraintBottom_toBottomOf="@+id/et_room_code"
+        app:layout_constraintStart_toStartOf="@+id/et_room_code"
+        app:layout_constraintTop_toTopOf="@+id/et_room_code" />
+
+    <Button
+        android:id="@+id/btn_team_name"
+        android:layout_width="144dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/rectangle_fill_red_radius_5"
+        android:text="확인"
+        android:textSize="16sp"
+        android:fontFamily="@font/gmarket_sans"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_room_code" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
