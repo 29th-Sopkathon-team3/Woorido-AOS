@@ -17,16 +17,13 @@
         android:theme="@style/Theme.Woorido">
         <activity
             android:name=".ui.SplashActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".ui.JoinProfileActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".ui.UserJoinActivity"
             android:exported="true">
