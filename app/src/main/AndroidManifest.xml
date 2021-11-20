@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Woorido">
         <activity
+            android:name=".detail.ui.ScoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".detail.ui.SelectUserListActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
