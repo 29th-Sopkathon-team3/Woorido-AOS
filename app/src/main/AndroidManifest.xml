@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.sopt.study.woorido">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -10,6 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Woorido">
         <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.JoinProfileActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".ui.UserJoinActivity"
             android:name=".detail.ui.ScoreActivity"
             android:exported="true" />
         <activity
@@ -24,6 +40,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

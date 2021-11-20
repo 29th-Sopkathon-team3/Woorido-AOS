@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.JoinProfileActivity"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tv_team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:text="WE-SOPT-29"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/gmarket_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_proile_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_team_name"
+        android:src="@drawable/ic_img" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="272dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rectangle_border_red_radius_5"
+        android:fontFamily="@font/gmarket_sans"
+        android:hint="이름을 입력해주세요"
+        android:paddingStart="21dp"
+
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_proile_picture" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="248dp"
+        android:background="@drawable/ic_enter"
+        app:layout_constraintBottom_toBottomOf="@+id/et_name"
+        app:layout_constraintStart_toStartOf="@+id/et_name"
+        app:layout_constraintTop_toTopOf="@+id/et_name" />
+
+    <TextView
+        android:id="@+id/tv_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="91dp"
+        android:fontFamily="@font/gmarket_sans"
+        android:text="사진과 이름은 변경 불가하니 \n신중하게 선택해주세요!"
+        android:lineSpacingExtra="5dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="144dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="19dp"
+        android:text="확인"
+        android:textSize="16sp"
+        android:fontFamily="@font/gmarket_sans"
+        android:background="@drawable/rectangle_fill_red_radius_5"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_warning" />
+</androidx.constraintlayout.widget.ConstraintLayout>
