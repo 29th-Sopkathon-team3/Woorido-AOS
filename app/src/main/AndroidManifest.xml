@@ -26,6 +26,13 @@
 
         <activity
             android:name=".ui.UserJoinActivity"
+            android:name=".detail.ui.ScoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".detail.ui.SelectUserListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
