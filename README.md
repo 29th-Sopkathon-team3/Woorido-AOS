@@ -423,6 +423,11 @@ Project Rule, Coding Convention, 회의록 등에 관한 내용은 WIKI에서 �
 
 
 # README 
+**화면구성**
+<br>
+|view1|view2|view3|view4|view5|
+|---|---|---|---|---|
+|![1](https://user-images.githubusercontent.com/69586104/142743560-05fc8fe2-5a87-4dc5-9eca-36078ed6b8ed.JPG)|![2](https://user-images.githubusercontent.com/69586104/142743563-f588ffbf-d753-4e54-90e7-6adc0e6403a9.JPG)|![3](https://user-images.githubusercontent.com/69586104/142743564-4299b9fa-a04a-4406-9fb4-577c79abda2a.JPG)|![4](https://user-images.githubusercontent.com/69586104/142743565-c0fd1416-ca51-40fd-8223-462b4b1fa3d5.JPG)|![6](https://user-images.githubusercontent.com/69586104/142743566-e9ed4b84-00b2-4226-ae6d-61d863439dd9.JPG)|
 <br>
 **slash 화면 구현**
 <br>
