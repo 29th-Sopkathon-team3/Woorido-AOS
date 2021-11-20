@@ -48,6 +48,7 @@
         <activity
             android:name=".detail.ui.ScoreActivity"
             android:exported="true" />
+
         <activity
             android:name=".detail.ui.SelectUserListActivity"
             android:exported="true" />
