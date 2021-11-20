@@ -415,3 +415,168 @@ Issue, Pull Request를 한 눈에 파악하기 위해 Label을 추가한다. 필
 ### 1.9. WIKI
 
 Project Rule, Coding Convention, 회의록 등에 관한 내용은 WIKI에서 작성한다. 가독성을 위해 목차도 함께 작성한다. 목차는 모든 내용이 작성된 후 [Generator](https://ecotrust-canada.github.io/markdown-toc/)를 통해 쉽게 작성할 수 있다.
+
+<br> 
+<br>
+
+<br>
+
+
+# README 
+<br>
+**slash 화면 구현**
+<br>
+
+```kotlin
+ Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+            finish()
+        },DURATION)
+
+```
+<br>
+**slash 화면 구현**
+<br>
+
+```kotlin
+ binding.btnDelete.setOnClickListener {
+            binding.etRoomCode.setText("")
+        }
+        binding.btnTeamName.setOnClickListener {
+            val intent = Intent(this,JoinProfileActivity::class.java)
+            startActivity(intent)
+        }
+```
+<br>
+
+**Profile 갤러리에서 들고오고 서버에 보낼 데이터 생성**
+<br>
+
+```kotlin
+ private val requestImage =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { activityResult ->
+            val intent = activityResult.data
+            if (intent != null) {
+                val fileUri = requireNotNull(intent.data)
+
+                Glide.with(this)
+                    .load(fileUri)
+                    .circleCrop()
+                    .into(binding.ivProilePicture)
+
+                val options = BitmapFactory.Options()
+                val inputStream: InputStream =
+                    requireNotNull(contentResolver.openInputStream(fileUri))
+                val bitmap = BitmapFactory.decodeStream(inputStream, null, options)
+                val byteArrayOutputStream = ByteArrayOutputStream()
+                bitmap!!.compress(Bitmap.CompressFormat.JPEG, 20, byteArrayOutputStream)
+                val fileBody = RequestBody.create(
+                    MediaType.parse("image/jpeg"),
+                    byteArrayOutputStream.toByteArray()
+                )
+
+                val part = MultipartBody.Part.createFormData(
+                    "images",
+                    File(fileUri.toString()).name,
+                    fileBody
+                )
+
+            }
+        }
+
+```
+
+<br>
+**SelectedUserListAdapter 구현**
+<br>
+
+```kotlin
+ class SelectedUserListAdapter :
+    RecyclerView.Adapter<SelectedUserListAdapter.SelectedUserListViewHolder>() {
+
+    var selectedUserData = mutableListOf<UserData>()
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectedUserListViewHolder {
+        val binding = UserSelectedRecyclerViewItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return SelectedUserListViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: SelectedUserListViewHolder, position: Int) {
+        holder.onBind(selectedUserData[position])
+    }
+
+    override fun getItemCount(): Int =selectedUserData.size
+
+    inner class SelectedUserListViewHolder(private val binding: UserSelectedRecyclerViewItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun onBind(data: UserData) {
+            binding.selectedUserData = data
+            Glide.with(binding.imageView2).load(data.userImg).circleCrop().into(binding.imageView2)
+        }
+    }
+}
+```
+<br>
+**SelectUserListAdapter 구현**
+<br>
+
+```kotlin
+class SelectUserListAdapter : RecyclerView.Adapter<SelectUserListAdapter.SelectUserListViewHolder>(){
+    private var selectListener : ((UserData) -> Unit)? = null
+    var selectUserData = mutableListOf<UserData>()
+
+    fun setSelectListener(listener : (UserData) -> Unit) {
+        selectListener = listener
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectUserListViewHolder {
+        val binding = UserRecyclerViewItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return SelectUserListViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: SelectUserListViewHolder, position: Int) {
+       holder.onBind(selectUserData[position])
+    }
+
+    override fun getItemCount(): Int = selectUserData.size
+
+
+    inner class SelectUserListViewHolder(private val binding: UserRecyclerViewItemBinding): RecyclerView.ViewHolder(binding.root){
+        fun onBind(data: UserData){
+            binding.selectUserData = data
+            Glide.with(binding.ivUserList).load(data.userImg).circleCrop().into(binding.ivUserList)
+        }
+
+        init {
+            binding.root.setOnClickListener{
+                binding.rbUserList.isSelected = true
+                selectListener?.invoke(selectUserData[adapterPosition])
+            }
+        }
+    }
+```
+
+<br>
+**UserData**
+<br>
+
+```kotlin
+data class UserData(
+    val userName:String,
+    val userProfile:Int,
+    val userTemp:String,
+    val userRank:String
+data class UserData(
+    var userName : String,
+    var userImg : Int,
+    var userId : Int
+)
+```
+<br><br>
+**느낀점**
+<br>
+협업이 너무 어렵습니다.. 시간 분배 너무 어렵고,,,  소통의 중요성 한번 더 느끼고 갑니다.
+
+
