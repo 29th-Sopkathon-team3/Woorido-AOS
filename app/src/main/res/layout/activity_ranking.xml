@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".detail.ui.RankingActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_floating"
+        app:backgroundTint="@color/white"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="355dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-125dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gmarket_sans"
+                android:text="최성철"
+                android:textColor="@color/white"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="@+id/iv_third_temp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_rank_third"
+                app:layout_constraintTop_toBottomOf="@id/iv_third_temp" />
+
+            <TextView
+                android:id="@+id/tv_rank_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/gmarket_sans"
+                android:text="01"
+                android:textColor="@color/red"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_first_temp"
+                app:layout_constraintStart_toStartOf="@+id/iv_first_temp"
+                app:layout_constraintTop_toBottomOf="@+id/iv_first_temp" />
+
+
+            <TextView
+                android:id="@+id/tv_name_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gmarket_sans"
+                android:text="한지우"
+                android:textColor="@color/white"
+                android:textFontWeight="400"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_rank_first"
+                app:layout_constraintStart_toStartOf="@+id/tv_rank_first"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rank_first" />
+
+
+            <TextView
+                android:id="@+id/tv_rank_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gmarket_sans"
+                android:text="02"
+                android:textColor="@color/red"
+                android:textFontWeight="700"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_name_third"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/iv_third_temp"
+                app:layout_constraintTop_toBottomOf="@id/iv_third_temp" />
+
+            <ImageView
+                android:id="@+id/iv_first_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:src="@drawable/ic_first_rank"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                tools:srcCompat="@drawable/ic_first_rank" />
+
+            <TextView
+                android:id="@+id/tv_rank_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gmarket_sans"
+                android:text="02"
+                android:textColor="@color/red"
+                android:textFontWeight="700"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_name_second"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/iv_second_temp"
+                app:layout_constraintTop_toBottomOf="@+id/iv_second_temp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_chat_balloon" />
+
+            <ImageView
+                android:id="@+id/iv_second_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:src="@drawable/ic_second_rank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_first_temp"
+                tools:srcCompat="@drawable/ic_second_rank" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_second_temp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_second_temp"
+                app:layout_constraintStart_toStartOf="@+id/iv_second_temp"
+                app:layout_constraintTop_toTopOf="@+id/iv_second_temp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/iv_third_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="56dp"
+                android:src="@drawable/ic_second_rank"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_first_temp"
+                tools:srcCompat="@drawable/ic_second_rank" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_third_temp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_third_temp"
+                app:layout_constraintStart_toStartOf="@+id/iv_third_temp"
+                app:layout_constraintTop_toTopOf="@+id/iv_third_temp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_uesr_rank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_second"
+                tools:itemCount="3"
+                tools:layout_editor_absoluteX="16dp"
+                tools:listitem="@layout/user_list_shape" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="37dp"
+                android:layout_marginBottom="19dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_first_temp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_first_temp"
+                app:layout_constraintStart_toStartOf="@+id/iv_first_temp"
+                app:layout_constraintTop_toTopOf="@+id/iv_first_temp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_name_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gmarket_sans"
+                android:text="김민지"
+                android:textColor="@color/white"
+                android:textFontWeight="400"
+                app:layout_constraintEnd_toEndOf="@+id/iv_second_temp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_rank_second"
+                app:layout_constraintTop_toBottomOf="@+id/iv_second_temp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
