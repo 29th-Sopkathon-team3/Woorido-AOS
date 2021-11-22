@@ -1,14 +1,12 @@
 package org.sopt.study.woorido.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import org.sopt.study.woorido.MainActivity
-import org.sopt.study.woorido.databinding.ActivityJoinProfileBinding
+import androidx.appcompat.app.AppCompatActivity
 import org.sopt.study.woorido.databinding.ActivitySplashBinding
-import org.sopt.study.woorido.databinding.ActivityUserJoinBinding
+import org.sopt.study.woorido.detail.ui.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding

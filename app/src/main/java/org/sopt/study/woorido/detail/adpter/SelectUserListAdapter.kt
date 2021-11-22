@@ -7,12 +7,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.sopt.study.woorido.databinding.UserRecyclerViewItemBinding
 import org.sopt.study.woorido.detail.data.UserData
+import org.sopt.study.woorido.detail.data.UserData2
 
 class SelectUserListAdapter : RecyclerView.Adapter<SelectUserListAdapter.SelectUserListViewHolder>(){
-    private var selectListener : ((UserData) -> Unit)? = null
-    var selectUserData = mutableListOf<UserData>()
+    private var selectListener : ((UserData2) -> Unit)? = null
+    var selectUserData = mutableListOf<UserData2>()
 
-    fun setSelectListener(listener : (UserData) -> Unit) {
+    fun setSelectListener(listener : (UserData2) -> Unit) {
         selectListener = listener
     }
 
@@ -29,7 +30,7 @@ class SelectUserListAdapter : RecyclerView.Adapter<SelectUserListAdapter.SelectU
 
 
     inner class SelectUserListViewHolder(private val binding: UserRecyclerViewItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun onBind(data: UserData){
+        fun onBind(data: UserData2){
             binding.selectUserData = data
             Glide.with(binding.ivUserList).load(data.userImg).circleCrop().into(binding.ivUserList)
         }

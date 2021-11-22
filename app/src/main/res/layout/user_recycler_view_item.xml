@@ -7,7 +7,7 @@
     <data>
         <variable
             name="selectUserData"
-            type="org.sopt.study.woorido.detail.data.UserData" />
+            type="org.sopt.study.woorido.detail.data.UserData2" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

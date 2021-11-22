@@ -5,8 +5,4 @@ data class UserData(
     val userProfile:Int,
     val userTemp:String,
     val userRank:String
-data class UserData(
-    var userName : String,
-    var userImg : Int,
-    var userId : Int
 )

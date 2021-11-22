@@ -13,7 +13,9 @@ class RoomCreateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding= ActivityRoomCreateBinding.inflate(layoutInflater)
-
+        binding.button.setOnClickListener{
+            binding.textView3.text="0B15SE"
+        }
         setContentView(binding.root)
     }
 }

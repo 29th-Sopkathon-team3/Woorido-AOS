@@ -7,6 +7,7 @@ import org.sopt.study.woorido.R
 import org.sopt.study.woorido.databinding.ActivityMainBinding
 import org.sopt.study.woorido.detail.adapter.RoomListAdapter
 import org.sopt.study.woorido.detail.data.RoomData
+import org.sopt.study.woorido.ui.UserJoinActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
@@ -16,9 +17,12 @@ class MainActivity : AppCompatActivity() {
 
         binding= ActivityMainBinding.inflate(layoutInflater)
         val intent = Intent(this, RoomCreateActivity::class.java)
-        val intent2 = Intent(this, RankingActivity::class.java)
+        val intent2 = Intent(this, UserJoinActivity::class.java)
         binding.btnCreateRoom.setOnClickListener{
             startActivity(intent)
+        }
+        binding.btnParticipate.setOnClickListener{
+            startActivity(intent2)
         }
 //        binding.rvRoomList.setOnClickListener{
 //            startActivity(intent2)

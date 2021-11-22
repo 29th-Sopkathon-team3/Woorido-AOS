@@ -13,6 +13,7 @@ class UserJoinActivity : AppCompatActivity() {
         binding = ActivityUserJoinBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         //setContentView(R.layout.activity_user_join)
 
         binding.btnDelete.setOnClickListener {
@@ -22,6 +23,7 @@ class UserJoinActivity : AppCompatActivity() {
         binding.btnTeamName.setOnClickListener {
             val intent = Intent(this,JoinProfileActivity::class.java)
             startActivity(intent)
+            finish()
 
         }
     }

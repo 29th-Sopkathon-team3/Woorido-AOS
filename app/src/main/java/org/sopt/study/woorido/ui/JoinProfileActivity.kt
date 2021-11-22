@@ -18,6 +18,7 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.sopt.study.woorido.databinding.ActivityJoinProfileBinding
 import org.sopt.study.woorido.databinding.ActivityUserJoinBinding
+import org.sopt.study.woorido.detail.ui.RankingActivity
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.InputStream
@@ -25,6 +26,8 @@ import java.io.InputStream
 class JoinProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityJoinProfileBinding
     private lateinit var getContent: ActivityResultLauncher<Intent>
+
+
 
 
     private val requestImage =
@@ -67,6 +70,11 @@ class JoinProfileActivity : AppCompatActivity() {
 
         binding.btnDelete.setOnClickListener {
             binding.etName.setText("")
+        }
+        binding.btnOk.setOnClickListener {
+            val intent2=Intent(this, RankingActivity::class.java)
+            startActivity(intent2)
+            finish()
         }
     }
 

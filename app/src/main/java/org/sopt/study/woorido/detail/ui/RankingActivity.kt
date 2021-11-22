@@ -1,5 +1,6 @@
 package org.sopt.study.woorido.detail.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
@@ -17,7 +18,10 @@ class RankingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding= ActivityRankingBinding.inflate(layoutInflater)
-
+        val intent = Intent(this, SelectUserListActivity::class.java)
+        binding.floatingActionButton.setOnClickListener{
+            startActivity(intent)
+        }
         initAdapter()
         initRanking()
         setContentView(binding.root)

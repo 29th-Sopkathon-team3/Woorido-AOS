@@ -38,7 +38,7 @@
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginStart="248dp"
-        android:background="@drawable/ic_enter"
+        android:background="@drawable/delete"
         app:layout_constraintBottom_toBottomOf="@+id/et_room_code"
         app:layout_constraintStart_toStartOf="@+id/et_room_code"
         app:layout_constraintTop_toTopOf="@+id/et_room_code" />
