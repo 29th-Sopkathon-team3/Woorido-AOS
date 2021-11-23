@@ -9,57 +9,59 @@
 
     <ImageView
         android:id="@+id/iv_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_width="112dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/image_home_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/image_logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_createRoom"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/gmarket_sans"
         android:paddingStart="59dp"
         android:paddingEnd="60dp"
         android:text="생성"
-        android:fontFamily="@font/gmarket_sans"
         android:textColor="@color/white"
-        android:textFontWeight="400"
+        android:textFontWeight="500"
         android:textSize="16sp"
-        android:background="@drawable/button_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_participate"
-        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_check" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_participate"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/gmarket_sans"
         android:paddingStart="59dp"
         android:paddingEnd="60dp"
         android:text="참여"
-        android:fontFamily="@font/gmarket_sans"
         android:textColor="@color/white"
         android:textFontWeight="400"
         android:textSize="16sp"
-        android:background="@drawable/button_shape"
         app:layout_constraintEnd_toStartOf="@+id/btn_createRoom"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_check" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_room_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
         android:layout_marginEnd="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +69,57 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_participate"
         tools:itemCount="3"
         tools:listitem="@layout/room_list_shape" />
+
+    <TextView
+        android:id="@+id/tv_your"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/gmarket_sans"
+        android:text="당신의"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_passion_temp"
+        app:layout_constraintTop_toTopOf="@+id/tv_passion_temp" />
+
+    <TextView
+        android:id="@+id/tv_passion_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gmarket_sans"
+        android:text="열정의 온도"
+        android:textColor="@color/red"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ll"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/tv_ll" />
+
+    <TextView
+        android:id="@+id/tv_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="22dp"
+        android:fontFamily="@font/gmarket_sans"
+        android:text="를"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/gmarket_sans"
+        android:text="확인해보세요"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_ll"
+        app:layout_constraintTop_toBottomOf="@+id/tv_passion_temp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
